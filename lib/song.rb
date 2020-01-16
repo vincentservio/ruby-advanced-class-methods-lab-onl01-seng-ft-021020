@@ -73,7 +73,7 @@ class Song
     song.name = name 
       song.save 
       song
-    song
+    
    end
 end
 
