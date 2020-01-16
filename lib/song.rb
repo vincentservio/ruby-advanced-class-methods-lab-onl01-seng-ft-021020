@@ -69,11 +69,17 @@ class Song
     end
     
   def self.create_from_filename(song_name)
-    song = self.new
-    song.name = name 
-      song.save 
-      song
-    
+   results = song_name.split(' - ',2)
+        artist_name = results [0] 
+          name = results[1]
+     mp3_results = name.split('.',2)
+        name = mp3_results[0]
+
+            song = self.create
+               song.name =name
+               song.artist_name = artist_name
+               song
+    end
    end
 end
 
